@@ -12,19 +12,33 @@
         let Num=Math.random()*100
         const ranNum=parseInt(Num)
         console.log(ranNum)
-        let gueNum=prompt(`Guess the number between 0-100`)
+        let gueNum=alert(`press "OK" to start the game `)
+        var i=0;
         
         while(ranNum!=gueNum){
             let gueNum=prompt(`Guess the number between 0-100`)
+            let no=i++
+
         if(ranNum<gueNum){
-            alert(`${gueNum} is gratr than the actual value `)
+            alert(`${gueNum} is gratr than the actual value ${ranNum}`)
         }
 
         if(ranNum>gueNum){
-            alert(`${gueNum} is less than the actual value`)
+            alert(`${gueNum} is less than the actual value ${ranNum}`)
         }
+        
         if(ranNum==gueNum){
             alert(`your answer is correct, ${ranNum} = ${gueNum}`)
+
+            if(no<=5){
+             alert(`your score is ${no}, you are a PRO player`)   
+            }
+            if(10>no>5){
+             alert(`your score is ${no}, you are an average player`)   
+            }
+            if(10<no){
+             alert(`your score is ${no}, you are a Noob player`)   
+            }
             break
         }
         }
