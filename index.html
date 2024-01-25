@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess the number</title>
+</head>
+<body>
+    <h1 style="text-shadow: 1px 1px 2px ; display: flex; justify-content: center; " >Guess The Numbrt</h1>
+
+    <script>
+        let Num=Math.random()*100
+        const ranNum=parseInt(Num)
+        console.log(ranNum)
+        let gueNum=prompt(`Guess the number between 0-100`)
+        
+        while(ranNum!=gueNum){
+            let gueNum=prompt(`Guess the number between 0-100`)
+        if(ranNum<gueNum){
+            alert(`${gueNum} is gratr than the actual value `)
+        }
+
+        if(ranNum>gueNum){
+            alert(`${gueNum} is less than the actual value`)
+        }
+        if(ranNum==gueNum){
+            alert(`your answer is correct, ${ranNum} = ${gueNum}`)
+            break
+        }
+        }
+       
+    </script>
+</body>
+</html>
